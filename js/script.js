@@ -21,15 +21,17 @@ const discountOver65 = (totalPrice * 0.4);
 console.log (discountOver65);
 
 // LOGICA DELL'APPLICAZIONE
+let finalPrice;
+
 if (userAge < 18) {
-    let finalPrice = (totalPrice - discountUnderAge);
+    finalPrice = (totalPrice - discountUnderAge);
     console.log (finalPrice);
 } else if (userAge > 65) {
-    let finalPrice = (totalPrice - discountOver65);
+    finalPrice = (totalPrice - discountOver65);
     console.log (finalPrice);
 } else {
-    let finalPrice = totalPrice;
+    finalPrice = totalPrice;
     console.log (finalPrice);
 }
 // OUTPUT ALL'UTENTE
-alert (finalPrice)
+alert('Il risultato è ' + finalPrice.toFixed(2));
